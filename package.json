@@ -1,6 +1,6 @@
 {
   "name": "@tiaanduplessis/imready",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Like jQuery ready, but vanilla JS",
   "license": "MIT",
   "repository": {
