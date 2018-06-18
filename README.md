@@ -57,6 +57,8 @@
 
 ## Install
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/tiaanduplessis/imready.svg)](https://greenkeeper.io/)
+
 ```sh
 $ npm install @tiaanduplessis/imready
 # OR
