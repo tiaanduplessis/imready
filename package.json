@@ -1,7 +1,7 @@
 {
   "name": "@tiaanduplessis/imready",
   "version": "1.0.0",
-  "description": "Promise based wrapper for DOMContentLoaded",
+  "description": "Like jQuery ready, but vanilla JS",
   "license": "MIT",
   "repository": {
     "url": "https://github.com/tiaanduplessis/imready",
@@ -10,31 +10,33 @@
   "homepage": "https://github.com/tiaanduplessis/imready",
   "bugs": "https://github.com/tiaanduplessis/imready",
   "main": "dist/imready.js",
-  "browser": "dist/imready.js",
-  "jsnext:main": "dist/imready.es.js",
-  "files": ["dist"],
+  "browser": "dist/imready.umd.js",
+  "module": "dist/imready.m.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "test": "jest",
-    "lint": "standard 'src/**/*.js'",
-    "lint:fix": "npm run lint -- --fix",
-    "build": "bili",
-    "start": "npm run test",
-    "pretest": "npm run format && npm run lint:fix",
-    "format": "prettier --print-width 100 --semi false --single-quote --write 'src/**/*.js'",
-    "precommit": "npm test",
-    "prepublish": "npm run build",
-    "release": "npm test && git commit -am $npm_package_version && git tag $npm_package_version && git push --tags && npm publish --access=public"
+    "lint": "standard --fix",
+    "build": "microbundle"
   },
-  "author": "tiaanduplessis <tiaanduplessis@hotmail.com>",
-  "babel": {
-    "presets": [["env"]]
-  },
+  "author": "Tiaan du Plessis",
   "devDependencies": {
-    "jest": "^21.2.1",
-    "standard": "^10.0.2",
-    "babel-preset-env": "^1.4.0",
-    "bili": "^0.18.1",
-    "husky": "^0.14.3",
-    "prettier": "~1.7.4"
+    "babel-preset-env": "^1.7.0",
+    "jest": "^23.1.0",
+    "microbundle": "^0.4.4",
+    "standard": "^11.0.1"
+  },
+  "babel": {
+    "presets": [
+      [
+        "env"
+      ]
+    ]
+  },
+  "standard": {
+    "env": {
+      "jest": true
+    }
   }
 }

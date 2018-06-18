@@ -1,4 +1,4 @@
-import imready from '../src/'
+import imready from '../'
 
 test('should be promise', () => {
   expect(imready).toBeDefined()
